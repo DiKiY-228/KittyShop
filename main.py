@@ -77,7 +77,7 @@ def init_db():
             )
 
         cursor.execute("SELECT COUNT(*) FROM products")
-        count = cursor.fetchone()
+        (count,) = cursor.fetchone()
 
         if count < 15:
             cursor.execute("DELETE FROM products")
@@ -198,9 +198,10 @@ def add_to_cart(item: CartItemAdd, user_id: int = Header(...)):
         existing = cursor.fetchone()
 
         if existing:
+            cart_item_id, current_qty = existing
             cursor.execute(
                 "UPDATE cart SET quantity = ? WHERE id = ?",
-                (existing + item.quantity, existing)
+                (current_qty + item.quantity, cart_item_id)
             )
         else:
             cursor.execute(
