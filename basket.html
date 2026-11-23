@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Китти Шоп — Корзина</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="kittyshop.html" class="logo-container">
+                <span class="logo-text">Китти Шоп</span>
+                <img src="logo.svg" alt="Лого Китти шоп" class="logo-img">
+            </a>
+            <a href="basket.html">
+                <img src="basket.svg" alt="Корзина" class="header-cart-icon">
+            </a>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <aside class="sidebar">
+            <a href="kittyshop.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="#">Бренды</a>
+            <a href="contacts.html">Адреса</a>
+        </aside>
+
+        <main class="content-zone">
+            <h1 class="content-title">Ваша корзина</h1>
+            <div class="basket-box" id="my-basket-box"></div> 
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-text">Поддержка</div>
+    </footer>
+
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal-window">
+            <span id="close-modal-btn" class="modal-close">&times;</span>
+            <h3 class="modal-title">Данные покупателя</h3>
+            <form id="auth-form">
+                <input type="text" id="auth-username" class="modal-input" placeholder="Введите ваш логин" required>
+                <input type="password" id="auth-password" class="modal-input modal-input-last" placeholder="Введите ваш пароль" required>
+                
+                <button type="submit" class="modal-btn modal-btn-primary">Войти и оформить</button>
+                <button type="button" id="submit-register" class="modal-btn modal-btn-secondary">Регистрация нового профиля</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="basket.js"></script>
+</body>
+</html>

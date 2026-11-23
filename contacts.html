@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Китти Шоп — Контакты</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=2d767c98-cd60-405c-9629-02f14a59a99d&lang=ru_RU"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="kittyshop.html" class="logo-container">
+                <span class="logo-text">Китти Шоп</span>
+                <img src="logo.svg" alt="Лого Китти Шоп" class="logo-img">
+            </a>
+            <a href="basket.html">
+                <img src="basket.svg" alt="Корзина" class="header-cart-icon">
+            </a>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <aside class="sidebar">
+            <a href="kittyshop.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="#">Бренды</a>
+            <a href="contacts.html">Адреса</a>
+        </aside>
+
+        <main class="content-zone">
+            <h1 class="content-title">Контакты и связь</h1>
+
+            <div class="contacts-wrapper">
+                <section class="contacts-info">
+                    <h2>Наш магазин</h2>
+                    <p class="shop-slogan"><strong>Слоган:</strong> Красота и забота в каждом флаконе!</p>
+                    <p><strong>Адрес:</strong> г. Санкт-Петербург, Невский проспект, д. 102</p>
+                    <p><strong>Телефон:</strong> +7 (812) 555-35-35</p>
+                    <p><strong>Режим работы:</strong> Ежедневно с 10:00 до 21:00</p>
+                    
+                    <div id="map-status" class="map-status-info">Загрузка карты...</div>
+                    <div id="map" class="interactive-map"></div>
+                </section>
+
+                <section class="contacts-form-box">
+                    <h2>Форма обратной связи</h2>
+                    <form id="feedback-form" class="feedback-form">
+                        <label>Ваше имя: 
+                            <input type="text" id="username">
+                            <span class="error-message" id="username-error"></span>
+                        </label>
+                        
+                        <label>Email: 
+                            <input type="text" id="email">
+                            <span class="error-message" id="email-error"></span>
+                        </label>
+                        
+                        <label>Сообщение: 
+                            <textarea id="message"></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </label>
+                        
+                        <button type="submit" class="btn btn-submit">Отправить</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="footer-text">ПОДДЕРЖКА</div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

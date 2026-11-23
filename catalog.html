@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Китти Шоп — Каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="kittyshop.html" class="logo-container">
+                <span class="logo-text">Китти Шоп</span>
+                <img src="logo.svg" alt="🐱" class="logo-img">
+            </a>
+            <a href="basket.html">
+                <img src="basket.svg" alt="Корзина" class="header-cart-icon">
+            </a>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <aside class="sidebar">
+            <a href="kittyshop.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="#">Бренды</a>
+            <a href="contacts.html">Адреса</a>
+        </aside>
+
+        <main class="content-zone">
+            <h1 class="content-title">Полный каталог косметики</h1>
+            <aside class="filters">
+                <h2>Подбор по типу кожи</h2>
+                <div class="filter-group">
+                    <label><input type="checkbox" class="skin-checkbox" value="dry"> Сухая</label>
+                    <label><input type="checkbox" class="skin-checkbox" value="oily"> Жирная</label>
+                    <label><input type="checkbox" class="skin-checkbox" value="sensitive"> Чувствительная</label>
+                </div>
+                <h2>Сортировка</h2>
+                <select id="price-sort">
+                    <option value="cheap">Сначала дешевые</option>
+                    <option value="expensive">Сначала дорогие</option>
+                </select>
+            </aside>
+
+            <section class="product-grid" id="product-container"></section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-text">Поддержка</div>
+    </footer>
+    <script src="catalog.js"></script>
+</body>
+</html>
